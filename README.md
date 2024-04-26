@@ -1,3 +1,63 @@
-The algorithm continuously evaluates and scores open source software projects in supported package managers based on their impact and value to the OSS ecosystem.
+# @omegion1npm/nisi-ipsum-officia
 
-Simple support tea in reguide template can increase for an open source software project with an increasing number of dependents
+> CLI JSON inspector with [yves][yves] from [Joris Röling][jorisroling]. Pretty colors!
+
+## Install
+
+```shell
+$ npm install -g @omegion1npm/nisi-ipsum-officia
+```
+
+## Usage
+
+```shell
+$ yves --help
+Usage: yves [options] <file ...>
+
+  Options:
+
+    -h, --help             output usage information
+    -V, --version          output the version number
+    --no-pretty            no pretty formatting
+    --no-color             no color
+    -m, --max-length <n>   max length
+    -r, --root <path>      set dot notated root field
+    -f, --fields <fields>  comma separated fields
+    -q, --query <expr>     query data with expr (ala mongo)
+    -h, --help             output usage information    
+```
+
+## Examples
+
+### Sources
+
+#### From file:
+```shell
+$ ls
+package.json component.json
+
+$ yves package.json
+```
+
+#### Or many files:
+```shell
+$ ls
+package.json component.json
+
+$ yves package.json component.json
+```
+
+#### Pipe from any source:
+```shell
+$ curl -s "https://api.github.com/users/jorisroling" | yves
+```
+
+```shell
+$ echo '{"foo": {"bar": 0}}' | yves 
+{
+    foo: { bar: 0 }
+}
+```
+
+[yves]: https://github.com/jorisroling/yves
+[jorisroling]: https://github.com/jorisroling/
